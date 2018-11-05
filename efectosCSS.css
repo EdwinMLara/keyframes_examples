@@ -1,0 +1,302 @@
+div{
+	font-family: Arial;
+	width: 80px;
+	background: #a8cf45;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 5px 40px;
+	margin: 12px 2px;
+	text-align: center;
+	font-weight: bolder;
+	position: relative;
+	overflow: hidden;
+}
+
+.caja:hover{
+	-moz-animation: 5s cambia_color 1;
+}
+
+@-moz-keyframes cambia_color{
+	0%,70%{
+		background: blue;
+	}
+	50%{
+		background: red;
+		height: 200px;
+	}
+}
+
+.flash:hover{
+	-moz-animation: 0.7s flash 1;
+}
+
+@-moz-keyframes flash{
+	50%{
+		opacity: 1;
+	}
+	25%,75%{
+		opacity: 0;
+	}	
+}
+
+.click:hover{
+	-moz-animation: 0.3s click 1; 
+}
+
+@-moz-keyframes click{
+	25%,75%{
+		-moz-transform: scale(0.8);
+	}
+	50%{
+		-moz_transform: scale(1.1);
+	}
+}
+
+.chicle:hover{
+	-moz-animation: 1s chicle 1;
+}
+
+@-moz-keyframes chicle{
+	30%{
+		-moz-transform: scaleX(1.25) scaleY(0.75);
+	}
+	50%{
+		-moz-transform: scaleX(0.75) scaleY(1.25);
+	}
+	60%{
+		-moz-transform: scaleX(1.15) scaleY(0.85);
+	}
+}
+
+.vibracion:hover{
+	-moz-animation: 1s vibracion infinite;
+}
+
+@-moz-keyframes vibracion{
+	5%,25%,45%,65%,85%{
+		-moz-transform: translateY(-10px);
+	}
+	15%,35%,55%,75%,95%{
+		-moz-transform: translateY(10px);
+	}
+	10%,30%,50%,70%,90%{
+		-moz-transform: translateX(-10px);
+	}
+	20%,40%,60%,80%{
+		-moz-transform: translateX(10px);
+	}
+}
+
+.cartel:hover{
+	-moz-animation: 1s cartel 1;
+	-moz-transform-origin: top center;
+}
+
+@-moz-keyframes cartel{
+	20%{
+		-moz-transform: rotate(15deg);
+	}
+	40%{
+		-moz-transform: rotate(-10deg);
+	}
+	60%{
+		-moz-transform: rotate(5deg);
+	}
+	80%{
+		-moz-transform: rotate(-3deg);
+	}
+}
+
+.balanceo:hover{
+	-moz-animation: 1s balanceo 1;
+}
+
+@-moz-keyframes balanceo{
+	20%{
+		-moz-transform: scale(0.7) 
+						rotate(-6deg);
+	}
+	30%,70%{
+		-moz-transform: scale(1.1)
+						rotate(6deg);
+	}
+	50%,90%{
+		-moz-transform: scale(1.1)
+						rotate(-6deg);	}
+}
+
+.vaiven:hover{
+	-moz-animation: 1s vaiven 1;
+}
+
+@-moz-keyframes vaiven{
+	15%{
+		-moz-transform: rotate(-16deg)
+						translateX(-25%);
+	}
+	30%{
+		-moz-transform: rotate(5deg)
+						translateX(20%);
+	}
+	45%{
+		-moz-transform: rotate(-3deg)
+						translateX(-10%);
+	}
+	60%{
+		-moz-transform: rotate(2deg)
+						translateX(5%);
+	}
+	30%{
+		-moz-transform: rotate(-1deg)
+						translateX(-3%);
+	}
+}
+
+.descolgado{
+	-moz-animation: 1s descolgado 1;
+	-moz-transform-origin: top left;
+}
+
+@-moz-keyframes descolgado{
+	20%,60%{
+		-moz-transform: rotate(80deg);
+	}
+	40%{
+		-moz-transform: rotate(60deg);
+	}
+	80%{
+		opacity: 1;
+		-moz-transform: rotate(60deg);
+	}
+	100%{
+		-moz-transform: translateY(400px);
+		opacity: 0;
+	}
+}
+
+.inrotativo{
+	-moz-animation: 1s inrotativo 1;
+}
+
+@-moz-keyframes inrotativo{
+	0%{
+		opacity: 0;
+		-moz-transform: translateX(-100%) 
+						rotate(-260deg);
+	}
+}
+
+.outrotativo{
+	-moz-animation: 1s outrotativo 1;
+}
+
+@-moz-keyframes outrotativo{
+	100%{
+		opacity: 0;
+		-moz-transform: translateX(100%) 
+						rotate(-260deg);
+	}
+}
+
+.revote{
+	-moz-animation: 2s revote 1;
+}
+
+@-moz-keyframes revote{
+	20%,50%,80%{
+		-moz-transform: translateY(0px);
+	}
+	30%{
+		-moz-transform: translateY(-45px);
+	}
+	60%{
+		-moz-transform: translateY(-25px);
+	}
+}
+
+.revoteIn{
+	-moz-animation: 1s revoteIn 1;
+}
+
+@-moz-keyframes revoteIn{
+	0%{
+		opacity: 0;
+		-moz-transform: scale(0.3);
+	}
+	50%{
+		opacity: 1;
+		-moz-transform: scale(1.1);
+	}
+	70%{
+		opacity: 1;
+		-moz-transform: scale(0.9);
+	}
+}
+
+.fade{
+	-moz-animation: 2s fade 1;
+}
+
+@-moz-keyframes fade{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.7;
+	}
+}
+
+.tapa{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 160px;
+	background: white;
+	position: absolute;
+	z-index: 10;
+	padding: 0px 0px;
+	margin: 0px 0px;
+
+	-moz-animation: 2s retirada 1;
+}
+
+@-moz-keyframes retirada{
+	0%{
+		left: 0px;
+	}
+
+}
+
+.veloz{
+	-moz-animation: 1s veloz 1;
+}
+
+@-moz-keyframes veloz{
+	0%{
+		opacity: 0;
+		-moz-transform: translateX(-200%)
+						skewX(40deg);
+	}
+	60%{
+		opacity: 1;
+		-moz-transform: translateX(-20%)
+						skewX(-40deg);
+	}
+	80%{
+		opacity: 1;
+		-moz-transform: translateX(0%)
+						skewX(15deg);
+	}
+}
+
+.giro{
+	-moz-transform-origin: center;
+	-moz-animation: 5s giro 1;
+}
+
+@-moz-keyframes giro{
+	0%{
+		opacity: 0;
+		-moz-transform: rotate(-200deg);
+	}
+}

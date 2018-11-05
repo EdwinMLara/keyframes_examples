@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="efectos3D_reloj.css">
+	<title>Document</title>
+</head>
+<body>
+	<div id="content">
+		<div id="hours1" class="rueda">
+		</div>
+
+		<div id="hours2" class="rueda">
+		</div>
+
+		<div id="minute1" class="rueda">
+		</div>
+
+		<div id="minute2" class="rueda">
+		</div>
+
+		<div id="seconds1" class="rueda">
+		</div>
+
+		<div id="seconds2" class="rueda">
+		</div>
+	</div>
+</body>
+</html>	
+
+<script>
+	function llenarRueda(rueda, inicio, limite){
+		var ruedaReloj = document.getElementById(rueda);
+
+		cadena = "";
+
+		for (i = inicio; i < 10; i++) {
+			cadena =  cadena + "<div class='card c" + i +"'>";
+			if(i <= limite) cadena =  cadena + i;
+			cadena = cadena + "</div>";
+		}
+
+		for (i = 0; i < inicio; i++) {
+			cadena =  cadena + "<div class='card c" + i +"'>";
+			if(i<=limite) cadena =  cadena + i;
+			cadena = cadena + "</div>";
+		}
+
+		//alert(cadena);
+		ruedaReloj.innerHTML = cadena;
+	}
+
+	//llenarRueda("hours1",5,7);
+
+	var time = new Date();
+
+	var horas1 = time.getHours();
+	while (horas1 % 10 != 0) horas1--;
+	horas1 = horas1/10;
+	llenarRueda("hours1",horas1,2);
+
+	var horas2 = time.getHours();
+	horas2 = horas2 - (horas1*10);
+	llenarRueda("hours2",horas2,9);
+
+	var minute1 = time.getMinutes();
+	while (minute1 % 10 != 0) minute1--;
+	minute1 = minute1/10;
+
+	llenarRueda("minute1",minute1,5);
+
+	var minute2 = time.getMinutes();
+	minute2 = minute2 - (minute1*10);
+	llenarRueda("minute2",minute2,9);
+
+	var second1 = time.getMinutes();
+	while (second1 % 10 != 0) second1--;
+	second1 = second1/10;
+
+	llenarRueda("seconds1",second1,5);
+
+	var second2 = time.getMinutes();
+	second2 = second2 - (second1*10);
+	llenarRueda("seconds2",second2,9);
+</script>
